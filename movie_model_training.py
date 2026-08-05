@@ -2,9 +2,12 @@
 import warnings
 
 import category_encoders
+import matplotlib
 import numpy
 import pandas
+import seaborn
 import sklearn
+import streamlit
 import xgboost
 
 warnings.filterwarnings("ignore")
@@ -35,12 +38,15 @@ from sklearn.ensemble import (
 
 from xgboost import XGBClassifier
 from category_encoders import TargetEncoder
+print(f"numpy              : {numpy.__version__}")
+print(f"pandas             : {pandas.__version__}")
+print(f"matplotlib         : {matplotlib.__version__}")
+print(f"seaborn            : {seaborn.__version__}")
+print(f"scikit-learn       : {sklearn.__version__}")
+print(f"xgboost            : {xgboost.__version__}")
+print(f"category-encoders  : {category_encoders.__version__}")
+print(f"streamlit          : {streamlit.__version__}")
 
-print("sklearn:", sklearn.__version__)
-print("category_encoders:", category_encoders.__version__)
-print("pandas:", pandas.__version__)
-print("numpy:", numpy.__version__)
-print("xgboost:", xgboost.__version__)
 print("Imports Loaded")
 
 #Cell 2 - Configuration
