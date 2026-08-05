@@ -1,8 +1,9 @@
 joblib
-numpy
+numpy==2.4.6
 matplotlib
 seaborn
-scikit-learn
-xgboost
-category-encoders
+scikit-learn==1.9.0
+xgboost==3.4.0
+category-encoders==2.8.1
 streamlit
+pandas==2.3.3

@@ -1,5 +1,12 @@
 # Cell 1 - Imports
 import warnings
+
+import category_encoders
+import numpy
+import pandas
+import sklearn
+import xgboost
+
 warnings.filterwarnings("ignore")
 import pandas as pd
 
@@ -29,6 +36,11 @@ from sklearn.ensemble import (
 from xgboost import XGBClassifier
 from category_encoders import TargetEncoder
 
+print("sklearn:", sklearn.__version__)
+print("category_encoders:", category_encoders.__version__)
+print("pandas:", pandas.__version__)
+print("numpy:", numpy.__version__)
+print("xgboost:", xgboost.__version__)
 print("Imports Loaded")
 
 #Cell 2 - Configuration
