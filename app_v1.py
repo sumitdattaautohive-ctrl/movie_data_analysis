@@ -65,7 +65,14 @@ with tab1:
     with col2:
         user_input['language'] = st.selectbox("Language", options=category_values['language'])
         user_input['country'] = st.selectbox("Country", options=category_values['country'])
-        user_input['genres'] = st.multiselect("Genres", options=category_values['genres'], default=["Action"])
+
+        # Lowercase default check to align with CountVectorizer features
+        default_genres = [g for g in ["action"] if g in category_values['genres']]
+        user_input['genres'] = st.multiselect(
+            "Genres",
+            options=category_values['genres'],
+            default=default_genres
+        )
         user_input['plot_keywords'] = st.text_input("Plot Keywords (space-separated)", value="hero battle future")
 
 with tab2:
